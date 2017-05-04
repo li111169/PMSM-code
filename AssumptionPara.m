@@ -1,0 +1,22 @@
+classdef AssumptionPara
+    properties
+        idr
+        iqr
+        Ib
+        P
+        pu
+        rou
+        MaxLd
+        CalLd
+        CalRatedT
+        CalMinT
+        RatedSpeed
+        MaxSpeed
+        ismax
+        delta
+        PowerFactor
+        ulim
+        MaxSpeedid
+        MaxSpeediq
+    end
+end
