@@ -1,4 +1,4 @@
-%Choose alpha-beta plane or z1-z2 plane SubPlane_6_ph(k,wt) 
+%Generate alpha-beta plane or z1-z2 plane SubPlane_6_ph(k,wt) 
 %k for [1 1 5 5]'
 %wt for [0 pi/2 0 pi/2]'
 function planes = SubPlane_6_ph(~)
@@ -6,7 +6,6 @@ function planes = SubPlane_6_ph(~)
     k=[1 1 5 5]';
     wt=[0 pi/2 0 pi/2]';
     theta=pi/6;
-    wt_temp=[wt (wt-theta) (wt-4*theta) (wt-5*theta) (wt-8*theta) (wt-9*theta)];
     planes=[cos(k.*wt) cos(k.*(wt-theta)) cos(k.*(wt-4*theta)) cos(k.*(wt-5*theta)) cos(k.*(wt-8*theta)) cos(k.*(wt-9*theta))];
  
 end
