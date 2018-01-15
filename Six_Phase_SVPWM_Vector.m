@@ -3,11 +3,11 @@ clear;
 
 planes=SubPlane_6_ph();
 switch_vectors = GenSwitchTable(6);
-coord_value=planes*switch_vectors';%the sequence is [alpha beta z1 z2]
+coord_value=planes*switch_vectors';%the plane sequence is [alpha beta z1 z2], switch vector sequence is from 0 to 63
 vector_mag=abs(sqrt(coord_value([1,3],:).^2+coord_value([2,4],:).^2));
 aubvcw=switch_vectors;
 abcuvw=[switch_vectors(:,[1 3 5]) switch_vectors(:,[2 4 6])];
-vector_info=[coord_value' switch_vectors vector_mag'];
+vector_info=roundn([coord_value' abcuvw vector_mag'],-2);
 
 axis equal
 alpha_beta=plot(coord_value(1,:)',coord_value(2,:)','*');
